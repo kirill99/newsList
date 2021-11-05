@@ -1,0 +1,135 @@
+:root {
+  --header-bg-color: #05316d;
+  --header--text-color: white;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--header-bg-color);
+  font-family: "Ceviche One", cursive;
+  -webkit-box-shadow: 0px 15px 12px -10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 15px 12px -10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 15px 12px -10px rgba(0, 0, 0, 0.6);
+  .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    .title {
+      span {
+        color: var(--header--text-color);
+        font-size: 52px;
+        line-height: 58px;
+        letter-spacing: 8px;
+      }
+    }
+  }
+}
+
+.news {
+  .title {
+    margin-bottom: 40px;
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .setting {
+    background-color: #6996d3;
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    form {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      .article {
+        box-sizing: border-box;
+        margin-right: 20px;
+
+        input {
+          outline: none;
+          height: 30px;
+          padding: 0;
+          border: none;
+          width: 300px;
+          padding: 2px 10px;
+        }
+      }
+      .search {
+        input {
+          outline: none;
+          height: 34px;
+          padding: 0;
+          border: none;
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  .cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .card {
+      transition: all 0.3s ease-out;
+      font-family: "Varela Round", sans-serif;
+      -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      border: 1px solid black;
+      width: 30%;
+      margin: 20px 1%;
+      //   height: 500px;
+      .image {
+        height: 200px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-size: cover;
+        margin-bottom: 20px;
+      }
+      .title {
+        padding: 0 20px;
+        text-align: left;
+        margin: 0 0 10px 0;
+        span {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+      .description {
+        padding: 0 20px;
+        text-align: left;
+        margin: 0 0 15px 0;
+
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.3px;
+        }
+      }
+    }
+
+    .card:hover {
+      transform: scale(1) translate(0, -2%);
+    }
+  }
+}
